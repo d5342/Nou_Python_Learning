@@ -1,0 +1,36 @@
+通常我們一般使用的方法都是先使用虛擬光碟掛載映像檔。例如是 E 槽。
+這裡我們以朱紅雪作示範。遊戲資料夾名稱預設為 ED4，放置在C槽。
+映像檔為Cue/Bin格式，檔名為〈ED4.cue & ED4.bin〉。
+
+◎指令類似如下：(括號內看情況)
+
+mount c c:\ED4
+mount d e:\ -t cdrom (-usecd 0 -ioct1)
+c:
+play
+
+別忘了指定一個空間為DOSBOX的磁碟機讓遊戲可以安裝
+mount e c:\dosgame
+
+
+難得玩一下dos時代的遊戲，結果視窗大小小得靠北
+來調整
+alt+enter直接改螢幕解析度變成600*480
+東西全跑掉了
+
+我要的是在1920*1080下遊玩，且能自由移出入滑鼠、顯示畫面依照比例放大
+
+參考網路教學後，dosbox的設定在安裝的資料夾中由dosbox-0.74-3.conf（依版本會有不同）調整
+
+在[sdl]的部份
+將
+fullresolution=desktop#1920x1080
+windowresolution=1024x768#original
+output=opengl
+autolock=false
+sensitivity=100
+與原本的進行置換
+
+如想像一般的運行了
+
+耶
